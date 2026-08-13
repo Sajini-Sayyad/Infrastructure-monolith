@@ -7,7 +7,21 @@ terraform {
       version = "~> 4.0"
     }
   }
+
+  # Remote Terraform State
+  backend "azurerm" {
+    resource_group_name  = "RG"
+    storage_account_name = "scss"
+    container_name       = "scss-cont"
+    key                  = "infrastructure.tfstate"
+
+    use_azuread_auth = true
+  }
 }
+
+# -----------------------------
+# Azure Provider
+# -----------------------------
 
 provider "azurerm" {
   features {}
