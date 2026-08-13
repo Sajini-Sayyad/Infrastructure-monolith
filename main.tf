@@ -15,6 +15,7 @@ terraform {
     container_name       = "scss-cont"
     key                  = "infrastructure.tfstate"
 
+    use_cli          = true
     use_azuread_auth = true
   }
 }
