@@ -131,7 +131,7 @@ resource "azurerm_network_interface_security_group_association" "nsg_association
 # -----------------------------
 
 resource "azurerm_linux_virtual_machine" "vm" {
-  name                = "vm-terraform-test"
+  name                = "snowman-monolith"
   resource_group_name = azurerm_resource_group.rg.name
   location            = var.location
 
